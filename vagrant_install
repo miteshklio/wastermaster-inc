@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Install SaltStack
+
+if hash salt 2>/dev/null; then
+    echo "Salt Installed."
+else
+    apt-get update -y
+    apt-get install wget -y
+    wget -O install_salt.sh https://bootstrap.saltstack.com
+    chmod a+x install_salt.sh
+    sh install_salt.sh -M
+    rm -f install_salt.sh
+    sed -i 's/#file_client: remote/file_client: local/g' /etc/salt/minion
+fi
+
+# Install services
+export DEBIAN_FRONTEND=noninteractive
+salt-call --local state.sls motd.motd
+salt-call --local state.sls redis.redis
+salt-call --local state.sls php.php
+salt-call --local state.sls mariadb.mariadb
+salt-call --local state.sls es.es
+service nginx restart
+service php7.0-fpm restart

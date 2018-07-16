@@ -1,0 +1,31 @@
+@import "variables";
+
+/** Orange Button **/
+.btn-green {
+  color: $white;
+  background-color: $green;
+  border-color: transparent;
+}
+
+.btn-green:hover, .btn-green:active, .btn-green:focus {
+  color: $light-gray;
+  background-image: none;
+  background-color: $green;
+  border-color: transparent;
+  outline: none;
+}
+
+.btn-convert,
+.btn-rebid {
+  margin-left: 1em !important;
+}
+
+@media(max-width: $mobile-breakpoint)  {
+  tr td .btn-xs {
+    margin: 0 0 5px 0 !important;
+    width: 100%;
+  }
+  .btn-new {
+    margin-top: 10px;
+  }
+}

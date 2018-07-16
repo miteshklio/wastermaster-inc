@@ -1,0 +1,71 @@
+@import "variables";
+
+.navbar-default {
+  background-color: $green !important;
+  border-bottom: none;
+  font-size: $h5-size;
+  height: 70px;
+  padding-top: 10px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: $light-gray;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+  color: $white;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: $white;
+    background-color: transparent;
+  position: relative;
+}
+
+// Nav "Here I am" white arrows for non-mobile
+@media(min-width: $mobile-breakpoint+1) {
+  .navbar-default .navbar-nav > .active > a:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    margin-left: -12px;
+    border: 12px solid transparent;
+    border-top-width: 0;
+    border-bottom-color: #fff;
+
+  }
+}
+
+// Mobile Nav
+@media(max-width: $mobile-breakpoint) {
+  .navbar-collapse {
+    border: none;
+    box-shadow: none;
+    background: $white;
+  }
+
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent !important;
+  }
+
+  .navbar-default .navbar-toggle {
+    margin-bottom: -5px;
+  }
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: $white;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent;
+    background-color: $green;
+    margin: 5px -15px 0px -15px;
+  }
+}
+

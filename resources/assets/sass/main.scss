@@ -1,0 +1,67 @@
+@import "variables";
+
+/** Main **/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-family: $opensans;
+}
+
+a.btn {
+  color: #fff !important;
+}
+
+a:link,
+a:visited {
+  color: $dark-green;
+}
+
+/** Logo **/
+.logo {
+  width: 125px;
+  margin-top: 0;
+}
+
+/** Alerts **/
+.alert-success {
+  margin-top: 15px;
+}
+
+/*
+  Archived tables
+*/
+tr.archived {
+  background: #f6f6f6;
+  color: #999;
+
+  a {
+    color: #777;
+  }
+}
+
+.badge.success {
+  background-color: $dark-green;
+}
+
+tr.has_bids {
+  background: $light-green;
+}
+
+.hauler_star {
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  margin-left: 0.5em;
+  margin-top: -4px;
+}
+
+p.green {
+  color: $dark-green;
+  font-weight: bolder;
+}
