@@ -166,6 +166,7 @@ return [
         Mews\Purifier\PurifierServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
 
+        Omniphx\Forrest\Providers\Laravel\ForrestServiceProvider::class,
     ],
 
     /*
@@ -214,6 +215,8 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Image'     => Intervention\Image\Facades\Image::class,
         'Purifier'  => Mews\Purifier\Facades\Purifier::class,
+
+        'Forrest' => Omniphx\Forrest\Providers\Laravel\Facades\Forrest::class,
     ],
 
 ];
