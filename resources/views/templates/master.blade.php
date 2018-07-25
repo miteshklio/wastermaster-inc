@@ -86,10 +86,7 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
-<script src="https://rawgit.com/twitter/typeahead.js/master/dist/bloodhound.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+<script src="{{ elixir('components.js') }}"></script>
 <script src="{{ elixir('app.js') }}"></script>
 
 @yield('scripts')
